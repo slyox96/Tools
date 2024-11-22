@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #016497; /* Hintergrundfarbe für den gesamten Körper */
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Horizontale Zentrierung des gesamten Inhalts */
+    align-items: center; /* Vertikale Zentrierung des gesamten Inhalts */
+    height: 100vh; /* Stellt sicher, dass der Körper die gesamte Höhe des Bildschirms ausfüllt */
+}
+
+header#banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    color: #016497; /* Verwendung der Hauptfarbe für den Text */
+    padding: 10px 20px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+header#banner h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header#banner #logo {
+    height: 40px;
+}
+
+.slider-container {
+    position: relative;
+    width: 60%; /* Breite des Sliders */
+    height: 60vh; /* Höhe des Sliders */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5; /* Stellt sicher, dass der Slider unter dem Banner angezeigt wird */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.question-slide {
+    flex: 0 0 100%; /* Jedes Slide nimmt 100% der Breite ein */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    padding: 0 20px; /* Etwas Abstand zu den Rändern */
+    box-sizing: border-box; /* Sorgt dafür, dass Padding nicht den gesamten Platz beansprucht */
+    overflow: hidden; /* Verhindert, dass der Text aus dem Container herausläuft */
+    height: 100%; /* Die Frage soll die ganze Höhe des Containers einnehmen */
+    background: none; /* Hintergrund transparent */
+}
+
+.question-slide h2 {
+    word-wrap: break-word; /* Umbrüche innerhalb des Textes */
+    white-space: normal; /* Erlaubt Zeilenumbrüche */
+    line-height: 1.4; /* Etwas mehr Abstand zwischen den Zeilen für bessere Lesbarkeit */
+    margin: 0; /* Entfernt den Standardabstand des h2-Elements */
+    text-align: center;
+    max-width: 100%; /* Verhindert, dass der Text den Container überschreitet */
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}

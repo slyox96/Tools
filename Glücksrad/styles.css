@@ -1,0 +1,167 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #016497; /* Damit der Hintergrund des gesamten Körpers sichtbar ist */
+    overflow: hidden;
+}
+
+header#banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 20px;
+}
+
+header#banner h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header#banner #logo {
+    height: 40px;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 20px;
+    width: 100vw; /* Deckt die volle Breite des Fensters ab */
+    height: calc(100vh - 70px); /* Deckt die Höhe des Fensters ab, abzüglich der Höhe des Banners */
+    background-color: #016497;
+}
+
+#wheelSection {
+    text-align: center;
+    background-color: #ffffff; /* Weißer Hintergrund für den Rad-Container */
+    border-radius: 10px; /* Abgerundete Ecken für ein moderneres Aussehen */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten für den Rad-Container */
+}
+
+#controlSection {
+    text-align: left;
+    max-width: 300px;
+    background-color: #ffffff; /* Weißer Hintergrund für das Formular */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#newField {
+    width: calc(100% - 100px);
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#fieldsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#fieldsList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+#fieldsList li span {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+#fieldsList li span.inactive {
+    text-decoration: line-through;
+    color: gray;
+}
+
+#fieldsList li button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+}
+
+#fieldsList li button.toggle-button {
+    background-color: #4caf50;
+}
+
+#fieldsList li button:hover {
+    opacity: 0.8;
+}
+
+#wheelCanvas {
+    display: block;
+    border: 2px solid #000;
+    margin: 0 auto 20px auto;
+}
+
+#confettiCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Popup-Stil */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Halbtransparenter Hintergrund */
+  display: none; /* Standardmäßig unsichtbar */
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  width: 80%;
+}
+
+.popup-content button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.popup-content button:hover {
+  opacity: 0.8;
+}

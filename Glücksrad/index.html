@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glücksrad</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header id="banner">
+    <img src="./images//skope.png" alt="Logo" id="logo">
+    <h1>Glücksrad</h1>
+  </header>
+  <div id="container">
+    <div id="wheelSection">
+      <canvas id="wheelCanvas" width="400" height="400"></canvas>
+      <button onclick="spinWheel()">Drehen!</button>
+      <p id="result"></p>
+    </div>
+    <div id="controlSection">
+      <input type="text" id="newField" placeholder="Neues Feld hinzufügen">
+      <button onclick="addField()">Hinzufügen</button>
+      <ul id="fieldsList"></ul>
+    </div>
+  </div>
+  <canvas id="confettiCanvas" width="800" height="600"></canvas>
+
+  <!-- Popup für den Gewinner -->
+  <div id="winnerPopup" class="popup">
+    <div class="popup-content">
+      <h2>Herzlichen Glückwunsch!</h2>
+      <p id="winnerText">Der Gewinner ist...</p>
+      <button onclick="closePopup()">Schließen</button>
+    </div>
+  </div>
+
+  <script src="wheel.js"></script>
+  <script src="confetti.js"></script>
+</body>
+</html>
